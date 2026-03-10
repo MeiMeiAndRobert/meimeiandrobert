@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robert Lee | Broker Associate | Engel &amp; Völkers Pasadena</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Robert Lee — Broker Associate at Engel & Völkers Pasadena. Lifelong San Gabriel Valley resident with over 20 years of luxury real estate experience. DRE #01714793.">
+  <meta name="author" content="Robert Lee">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.meimeiandrobert.com/robert/">
+  <link rel="icon" href="../meimeiandrobert.jpg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.meimeiandrobert.com/robert/">
+  <meta property="og:title" content="Robert Lee | Broker Associate | Engel &amp; Völkers Pasadena">
+  <meta property="og:description" content="Over 20 years of luxury real estate experience in the San Gabriel Valley. Fluent in Mandarin, Cantonese, and English.">
+  <meta property="og:image" content="https://www.meimeiandrobert.com/robertprofile.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8643ZZVEW1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8643ZZVEW1');
+  </script>
+
+  <style>
+    /* ── Design Tokens ──────────────────────────────────────────── */
+    :root {
+      --font-serif:  'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-sans:   'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      --white-100: #ffffff;
+      --white-90:  rgba(255,255,255,0.90);
+      --white-70:  rgba(255,255,255,0.70);
+      --white-30:  rgba(255,255,255,0.28);
+      --glass-bg:     rgba(255,255,255,0.09);
+      --glass-border: rgba(255,255,255,0.16);
+      --card-radius:  22px;
+      --card-shadow:  0 20px 72px rgba(0,0,0,0.55);
+      --accent: #c0392b;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      min-height: 100%;
+      font-family: var(--font-sans);
+      background: #080808;
+      color: var(--white-100);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Background ─────────────────────────────────────────────── */
+    .bg {
+      position: fixed;
+      inset: 0;
+      background: url('../meimeiandrobert.jpg') center 17% / cover no-repeat;
+      filter: blur(22px) brightness(0.38) saturate(1.25);
+      transform: scale(1.08);
+      z-index: 0;
+    }
+
+    /* ── Page wrapper ───────────────────────────────────────────── */
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 20px 72px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    /* ── Nav back ────────────────────────────────────────────────── */
+    .nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white-70);
+      text-decoration: none;
+      transition: color 0.2s;
+      width: fit-content;
+    }
+    .nav-back:hover { color: var(--white-100); }
+    .nav-back svg { width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
+
+    /* ── Hero ────────────────────────────────────────────────────── */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 18px;
+      padding: 12px 0 4px;
+    }
+
+    .hero__photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 2px solid var(--white-30);
+      box-shadow: var(--card-shadow);
+    }
+
+    .hero__name {
+      font-family: var(--font-serif);
+      font-size: clamp(1.9rem, 6vw, 2.8rem);
+      font-weight: 400;
+      color: var(--white-100);
+      letter-spacing: 0.02em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .hero__title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.63rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--white-70);
+      margin-top: 0;
+    }
+
+    .hero__tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 9px;
+      margin-top: 4px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.63rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white-90);
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 100px;
+      padding: 7px 16px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    /* ── Glass card ──────────────────────────────────────────────── */
+    .glass-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(28px) saturate(1.6);
+      -webkit-backdrop-filter: blur(28px) saturate(1.6);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--card-radius);
+      padding: 36px 32px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .glass-card--compact {
+      padding: 24px 22px;
+    }
+
+    .card-label {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--white-70);
+      margin-bottom: 8px;
+    }
+
+    .card-title {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--white-90);
+      margin-bottom: 18px;
+    }
+
+    .card-divider {
+      width: 32px;
+      height: 1px;
+      background: var(--white-30);
+      margin-bottom: 22px;
+    }
+
+    /* ── Bio ─────────────────────────────────────────────────────── */
+    .bio-text {
+      font-size: 0.975rem;
+      line-height: 1.85;
+      color: var(--white-90);
+    }
+
+    .bio-text p + p { margin-top: 14px; }
+
+    /* ── Credentials grid ────────────────────────────────────────── */
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .cred-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--white-70);
+      margin-bottom: 5px;
+    }
+
+    .cred-value {
+      font-size: 0.9rem;
+      color: var(--white-90);
+      line-height: 1.65;
+    }
+
+    /* ── Testimonial ─────────────────────────────────────────────── */
+    .testimonial-stars {
+      color: var(--accent);
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-quote {
+      font-family: var(--font-serif);
+      font-size: 1.02rem;
+      font-weight: 400;
+      line-height: 1.85;
+      color: var(--white-90);
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+
+    .testimonial-cite {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.63rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white-70);
+    }
+
+    /* ── Contact list ────────────────────────────────────────────── */
+    .contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.86rem;
+      color: var(--white-90);
+    }
+
+    .contact-list a {
+      color: var(--white-90);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-list a:hover { color: var(--white-100); }
+
+    .icon {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+      opacity: 0.75;
+    }
+
+    .team-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: var(--white-70);
+      padding-top: 8px;
+    }
+
+    .team-footer__item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .team-footer a {
+      color: var(--white-70);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .team-footer a:hover {
+      color: var(--white-100);
+    }
+
+    /* ── Desktop ─────────────────────────────────────────────────── */
+    @media (min-width: 640px) {
+      .hero__photo {
+        width: 190px;
+        height: 190px;
+      }
+
+      .credentials-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .team-footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg" role="presentation" aria-hidden="true"></div>
+
+  <div class="page">
+
+    <!-- Back nav -->
+    <a href="/" class="nav-back" aria-label="Back to team page">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+      Mei Mei &amp; Robert
+    </a>
+
+    <!-- Hero -->
+    <section class="hero">
+      <img
+        class="hero__photo"
+        src="../robertprofile.jpg"
+        alt="Robert Lee"
+        width="190" height="190"
+        loading="eager"
+      >
+      <div>
+        <h1 class="hero__name">Robert Lee</h1>
+        <p class="hero__title">Broker Associate</p>
+      </div>
+      <div class="hero__tags">
+        <span class="tag">DRE #01714793</span>
+        <span class="tag">Mandarin &bull; Cantonese &bull; English</span>
+      </div>
+    </section>
+
+    <!-- License & Credentials -->
+    <article class="glass-card glass-card--compact">
+      <span class="card-label">Credentials</span>
+      <h2 class="card-title">License &amp; Office</h2>
+      <div class="card-divider"></div>
+      <div class="credentials-grid">
+        <div>
+          <p class="cred-label">License</p>
+          <p class="cred-value">CA DRE #01714793</p>
+        </div>
+        <div>
+          <p class="cred-label">Languages</p>
+          <p class="cred-value">Mandarin<br>Cantonese<br>English</p>
+        </div>
+        <div>
+          <p class="cred-label">Office</p>
+          <p class="cred-value">540 S. Lake Ave<br>Pasadena, CA 91101</p>
+        </div>
+      </div>
+      <div class="card-divider" style="margin-top: 18px;"></div>
+      <span class="card-label">Get in Touch</span>
+      <h2 class="card-title">Contact Robert</h2>
+      <ul class="contact-list">
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:6268243388">626-824-3388</a>
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:robert@meimeiandrobert.com">robert@meimeiandrobert.com</a>
+        </li>
+      </ul>
+    </article>
+
+    <!-- About Me -->
+    <article class="glass-card">
+      <span class="card-label">Background</span>
+      <h2 class="card-title">About Me</h2>
+      <div class="card-divider"></div>
+      <div class="bio-text">
+        <p>With over 20 years of experience in the real estate industry, Robert Lee is more than just a Realtor&mdash;he&rsquo;s a lifelong San Gabriel Valley resident with deep roots in the community he proudly serves. His local expertise, paired with a genuine passion for helping others, makes him a trusted advisor for buyers, sellers, and investors alike.</p>
+        <p>Born in Taiwan and raised in the U.S. from the age of one, Robert learned early on the value of hard work, dedication, and integrity&mdash;principles that continue to guide his real estate career. Fluent in Mandarin, Cantonese, and English, he bridges cultures and connects with a wide range of clients with ease and authenticity.</p>
+        <p>After earning his degree in Business Management and Marketing from San Diego State University, Robert launched his career with a leading North American homebuilder, closing over 280 homes in just his first two years. In 2020, Robert teamed up with seasoned, well-respected Realtor&reg; Mei Mei Liu, and together, they formed the Mei Mei &amp; Robert Team. With a shared commitment to providing top-notch service, they have since built a legacy of success, offering clients an unmatched level of expertise, personalized attention, and a seamless experience.</p>
+        <p>Robert specializes in the marketing and sale of high-end, luxury properties and architecturally significant homes across the San Gabriel Valley. He has successfully represented a variety of notable estates, applying a discerning eye and refined marketing strategy tailored to showcase each property&rsquo;s unique character. From historic Pasadena mansions to modern hillside retreats, Robert knows how to position luxury homes to attract qualified buyers and achieve exceptional outcomes.</p>
+      </div>
+    </article>
+
+    <!-- Testimonials -->
+    <article class="glass-card">
+      <span class="card-label">Client Words</span>
+      <h2 class="card-title">Testimonials</h2>
+      <div class="card-divider"></div>
+      <blockquote>
+        <span class="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p class="testimonial-quote">&ldquo;My husband and I have been working with Robert since 2013. He has helped us buy and sell multiple properties over the years. We love working with Robert because he is very proactive and moves quickly. He is a seasoned professional in the real estate industry and also has access to a lot of resources. We would highly recommend Robert for anyone who is looking to buy or sell a home.&rdquo;</p>
+        <cite class="testimonial-cite">&#8212; Annie C</cite>
+      </blockquote>
+    </article>
+
+    <footer class="team-footer">
+      <div class="team-footer__item">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        <span>540 S. Lake Ave, Pasadena CA 91101</span>
+      </div>
+      <div class="team-footer__item">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608C4.516 2.497 5.783 2.226 7.15 2.163 8.416 2.105 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.333.014 7.053.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.053.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.856.601 3.698 1.942 5.038 1.341 1.341 3.182 1.857 5.038 1.942C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.856-.085 3.698-.601 5.038-1.942 1.341-1.341 1.857-3.182 1.942-5.038C23.986 15.668 24 15.259 24 12s-.014-3.668-.072-4.948c-.085-1.856-.601-3.698-1.942-5.038C20.645.673 18.804.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+        <a href="https://www.instagram.com/meimeiandrobert/" target="_blank" rel="noopener noreferrer">MeiMeiandRobert</a>
+      </div>
+      <div class="team-footer__item">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        <a href="https://www.facebook.com/MeiMeiandRobert/" target="_blank" rel="noopener noreferrer">MeiMeiandRobert</a>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>

@@ -147,6 +147,7 @@
       text-align: center;
       box-shadow: var(--card-shadow);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
+      cursor: pointer;
     }
 
     .card:hover {
@@ -190,6 +191,25 @@
       height: 1px;
       background: var(--white-30);
       margin: 0 auto 22px;
+    }
+
+    .card__profile-link {
+      display: inline-block;
+      margin-top: 18px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white-90);
+      text-decoration: none;
+      border-bottom: 1px solid var(--white-30);
+      padding-bottom: 2px;
+    }
+
+    .card__profile-link:hover {
+      color: var(--white-100);
+      border-bottom-color: var(--white-70);
     }
 
     /* ── Contact list ────────────────────────────────────────────── */
@@ -265,6 +285,91 @@
       object-fit: cover;
     }
 
+    /* ── Red ampersand ───────────────────────────────────────────── */
+    .amp { color: #c0392b; }
+
+    /* ── Testimonials ────────────────────────────────────────────── */
+    .testimonials-section {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .section-heading { text-align: center; }
+
+    .section-label {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--white-70);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 400;
+      color: var(--white-90);
+      letter-spacing: 0.02em;
+    }
+
+    .section-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--white-30);
+      margin: 10px auto 0;
+    }
+
+    .testimonials-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      width: 100%;
+    }
+
+    .testimonial-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(28px) saturate(1.6);
+      -webkit-backdrop-filter: blur(28px) saturate(1.6);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--card-radius);
+      padding: 32px 28px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .testimonial-card__stars {
+      color: #c0392b;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .testimonial-card__quote {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.85;
+      color: var(--white-90);
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .testimonial-card__cite {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white-70);
+    }
+
     /* ── Desktop breakpoint ──────────────────────────────────────── */
     @media (min-width: 680px) {
       .cards-row {
@@ -288,6 +393,15 @@
       .team-photo {
         max-width: 640px;
       }
+
+      .testimonials-grid {
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .testimonial-card {
+        flex: 1;
+      }
     }
   </style>
 </head>
@@ -299,7 +413,7 @@
 
     <!-- Wordmark / brand header -->
     <header class="wordmark">
-      <h2 class="wordmark__name"><span class="wordmark__name-part">Mei Mei</span> &amp; <span class="wordmark__name-part">Robert</span></h2>
+      <h2 class="wordmark__name"><span class="wordmark__name-part">Mei Mei</span> <span class="amp">&amp;</span> <span class="wordmark__name-part">Robert</span></h2>
       <span class="wordmark__sub">Luxury Real Estate &nbsp;&bull;&nbsp; Pasadena &amp; Los Angeles</span>
     </header>
 
@@ -317,7 +431,7 @@
     <div class="cards-row">
 
       <!-- Robert Lee -->
-      <article class="card">
+      <article class="card" data-href="robert/">
         <img
           class="card__photo"
           src="robertprofile.jpg"
@@ -338,10 +452,11 @@
             <a href="mailto:robert@meimeiandrobert.com">robert@meimeiandrobert.com</a>
           </li>
         </ul>
+        <a class="card__profile-link" href="robert/">View Profile</a>
       </article>
 
       <!-- Mei Mei Liu -->
-      <article class="card">
+      <article class="card" data-href="meimei/">
         <img
           class="card__photo"
           src="meimeiprofile.jpeg"
@@ -362,9 +477,35 @@
             <a href="mailto:meimei@meimeiandrobert.com">meimei@meimeiandrobert.com</a>
           </li>
         </ul>
+        <a class="card__profile-link" href="meimei/">View Profile</a>
       </article>
 
     </div><!-- /.cards-row -->
+
+    <!-- Testimonials -->
+    <section class="testimonials-section" aria-labelledby="testimonials-heading">
+
+      <div class="section-heading">
+        <span class="section-label">Client Words</span>
+        <h2 class="section-title" id="testimonials-heading">Testimonials</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="testimonials-grid">
+        <blockquote class="testimonial-card">
+          <span class="testimonial-card__stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p class="testimonial-card__quote">&ldquo;Mei Mei and Robert are the best real estate agents in LA I have known so far. They helped me to sell my colonial-style house last winter in Temple City. They know how to appreciate the architecture of the house and highlight it. The team is very professional and pay attention to all the details. From paint choices, changing out light fixtures, to staging and advertisement, they know how to get the home presented beautifully. You can trust and rely on them.&rdquo;</p>
+          <cite class="testimonial-card__cite">&#8212; Jacqueline C</cite>
+        </blockquote>
+
+        <blockquote class="testimonial-card">
+          <span class="testimonial-card__stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p class="testimonial-card__quote">&ldquo;My husband and I have been working with Robert since 2013. He has helped us buy and sell multiple properties over the years. We love working with Robert because he is very proactive and moves quickly. He is a seasoned professional in the real estate industry and also has access to a lot of resources. We would highly recommend Robert for anyone who is looking to buy or sell a home.&rdquo;</p>
+          <cite class="testimonial-card__cite">&#8212; Annie C</cite>
+        </blockquote>
+      </div>
+
+    </section>
 
     <!-- Shared team info -->
     <footer class="team-footer">
@@ -383,5 +524,16 @@
     </footer>
 
   </main>
+
+  <script>
+    // Clicking anywhere on an agent card (but not on an inner link) navigates to the profile.
+    document.querySelectorAll('.card[data-href]').forEach(function (card) {
+      card.addEventListener('click', function (e) {
+        if (!e.target.closest('a')) {
+          window.location.href = new URL(card.dataset.href, window.location.href).href;
+        }
+      });
+    });
+  </script>
 </body>
 </html>
