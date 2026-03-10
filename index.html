@@ -11,20 +11,20 @@
   <meta name="author" content="Mei Mei Liu & Robert Lee">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.meimeiandrobert.com/">
-  <link rel="icon" href="splash_image.jpg">
+  <link rel="icon" href="meimeiandrobert.jpg">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.meimeiandrobert.com/">
   <meta property="og:title" content="Mei Mei &amp; Robert | Luxury Real Estate | Pasadena &amp; Los Angeles">
   <meta property="og:description" content="Luxury real estate experts serving Pasadena, Los Angeles, and the San Gabriel Valley.">
-  <meta property="og:image" content="https://www.meimeiandrobert.com/splash_image.jpg">
+  <meta property="og:image" content="https://www.meimeiandrobert.com/meimeiandrobert.jpg">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Mei Mei &amp; Robert | Luxury Real Estate | Pasadena &amp; Los Angeles">
   <meta name="twitter:description" content="Luxury real estate experts serving Pasadena, Los Angeles, and the San Gabriel Valley.">
-  <meta name="twitter:image" content="https://www.meimeiandrobert.com/splash_image.jpg">
+  <meta name="twitter:image" content="https://www.meimeiandrobert.com/meimeiandrobert.jpg">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,7 +74,7 @@
     .bg {
       position: fixed;
       inset: 0;
-      background: url('splash_image.jpg') center 17% / cover no-repeat;
+      background: url('meimeiandrobert.jpg') center 17% / cover no-repeat;
       filter: blur(22px) brightness(0.42) saturate(1.25);
       transform: scale(1.08);
       z-index: 0;
@@ -239,6 +239,23 @@
       opacity: 0.80;
     }
 
+    /* ── Team Photo ──────────────────────────────────────────────── */
+    .team-photo {
+      width: 100%;
+      max-width: 560px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--card-shadow);
+    }
+
+    .team-photo__img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
     /* ── Desktop breakpoint ──────────────────────────────────────── */
     @media (min-width: 680px) {
       .cards-row {
@@ -258,6 +275,10 @@
         justify-content: center;
         gap: 10px 36px;
       }
+
+      .team-photo {
+        max-width: 640px;
+      }
     }
   </style>
 </head>
@@ -273,38 +294,24 @@
       <span class="wordmark__sub">Luxury Real Estate &nbsp;&bull;&nbsp; Pasadena &amp; Los Angeles</span>
     </header>
 
+    <!-- Team photo -->
+    <figure class="team-photo">
+      <img
+        src="meimeiandrobert.jpg"
+        alt="Mei Mei Liu and Robert Lee"
+        class="team-photo__img"
+        loading="eager"
+      >
+    </figure>
+
     <!-- Individual agent cards -->
     <div class="cards-row">
-
-      <!-- Mei Mei Liu -->
-      <article class="card">
-        <img
-          class="card__photo"
-          src="https://eva-personnel-service-prod-uploader.s3.us-west-2.amazonaws.com/advisorphoto/abca4a89-7a84-4539-a819-083c399fad10/advisorphoto-LiuMeiMei-s-web-large.jpg"
-          alt="Mei Mei Liu"
-          width="96" height="96"
-          loading="eager"
-        >
-        <h1 class="card__name">Mei Mei Liu</h1>
-        <p class="card__role">Realtor<br>DRE #01329663</p>
-        <div class="card__divider"></div>
-        <ul class="contact-list">
-          <li>
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
-            <a href="tel:6264295715">626-429-5715</a>
-          </li>
-          <li>
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            <a href="mailto:meimei@meimeiandrobert.com">meimei@meimeiandrobert.com</a>
-          </li>
-        </ul>
-      </article>
 
       <!-- Robert Lee -->
       <article class="card">
         <img
           class="card__photo"
-          src="https://eva-personnel-service-prod-uploader.s3.us-west-2.amazonaws.com/advisorphoto/df250ecc-ec00-46d0-92b3-795f13e9c2c0/advisorphoto-LeeRobert-s-web-large.jpg"
+          src="robertprofile.jpg"
           alt="Robert Lee"
           width="96" height="96"
           loading="eager"
@@ -320,6 +327,30 @@
           <li>
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
             <a href="mailto:robert@meimeiandrobert.com">robert@meimeiandrobert.com</a>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Mei Mei Liu -->
+      <article class="card">
+        <img
+          class="card__photo"
+          src="meimeiprofile.jpeg"
+          alt="Mei Mei Liu"
+          width="96" height="96"
+          loading="eager"
+        >
+        <h1 class="card__name">Mei Mei Liu</h1>
+        <p class="card__role">Realtor<br>DRE #01329663</p>
+        <div class="card__divider"></div>
+        <ul class="contact-list">
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+            <a href="tel:6264295715">626-429-5715</a>
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <a href="mailto:meimei@meimeiandrobert.com">meimei@meimeiandrobert.com</a>
           </li>
         </ul>
       </article>
