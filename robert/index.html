@@ -22,7 +22,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8643ZZVEW1"></script>
@@ -81,11 +81,44 @@
       gap: 28px;
     }
 
-    /* ── Nav back ────────────────────────────────────────────────── */
-    .nav-back {
-      display: inline-flex;
+    /* ── Site nav header ─────────────────────────────────────────── */
+    .site-nav {
+      display: flex;
       align-items: center;
-      gap: 8px;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .site-nav__logo {
+      text-decoration: none;
+      color: inherit;
+    }
+    .wordmark__name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.1rem, 4vw, 1.5rem);
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--white-90);
+      transition: color 0.2s;
+    }
+    .site-nav__logo:hover .wordmark__name { color: var(--white-100); }
+    .wordmark__name-part {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .wordmark__sub {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--white-70);
+      margin-top: 6px;
+    }
+    .amp { color: #c0392b; }
+    .site-nav__link {
       font-family: 'Montserrat', sans-serif;
       font-size: 0.65rem;
       font-weight: 500;
@@ -94,10 +127,16 @@
       color: var(--white-70);
       text-decoration: none;
       transition: color 0.2s;
-      width: fit-content;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+      white-space: nowrap;
     }
-    .nav-back:hover { color: var(--white-100); }
-    .nav-back svg { width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
+    .site-nav nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .site-nav__link:hover { color: var(--white-100); border-bottom-color: var(--white-30); }
 
     /* ── Hero ────────────────────────────────────────────────────── */
     .hero {
@@ -248,8 +287,8 @@
     }
 
     .testimonial-quote {
-      font-family: var(--font-serif);
-      font-size: 1.02rem;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1rem;
       font-weight: 400;
       line-height: 1.85;
       color: var(--white-90);
@@ -322,7 +361,60 @@
     .team-footer a:hover {
       color: var(--white-100);
     }
-
+    /* ── Testimonials Carousel ─────────────────────────────────── */
+    .testimonials-carousel { width: 100%; }
+    .carousel-track {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .carousel-slide {
+      grid-column: 1;
+      grid-row: 1;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+      pointer-events: none;
+      visibility: hidden;
+    }
+    .carousel-slide.active {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+    }
+    .carousel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .carousel-btn {
+      background: none;
+      border: 1px solid var(--glass-border);
+      color: var(--white-70);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 0.9rem;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .carousel-btn:hover { color: var(--white-100); border-color: var(--white-70); }
+    .carousel-dots { display: flex; gap: 8px; }
+    .carousel-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--white-30);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      padding: 0;
+    }
+    .carousel-dot.active { background: #c0392b; }
     /* ── Desktop ─────────────────────────────────────────────────── */
     @media (min-width: 640px) {
       .hero__photo {
@@ -349,11 +441,17 @@
 
   <div class="page">
 
-    <!-- Back nav -->
-    <a href="/" class="nav-back" aria-label="Back to team page">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
-      Mei Mei &amp; Robert
-    </a>
+    <!-- Site nav header -->
+    <header class="site-nav">
+      <a href="/" class="site-nav__logo" aria-label="Mei Mei &amp; Robert — Home">
+        <h2 class="wordmark__name"><span class="wordmark__name-part">Mei Mei</span> <span class="amp">&amp;</span> <span class="wordmark__name-part">Robert</span></h2>
+        <span class="wordmark__sub">Luxury Real Estate &nbsp;&bull;&nbsp; Pasadena &amp; Los Angeles</span>
+      </a>
+      <nav>
+        <a href="/" class="site-nav__link">Home</a>
+        <a href="/team/" class="site-nav__link">Our Team</a>
+      </nav>
+    </header>
 
     <!-- Hero -->
     <section class="hero">
@@ -369,8 +467,7 @@
         <p class="hero__title">Broker Associate</p>
       </div>
       <div class="hero__tags">
-        <span class="tag">DRE #01714793</span>
-        <span class="tag">Mandarin &bull; Cantonese &bull; English</span>
+        <span class="tag">English &bull; Mandarin 中文 &bull; Cantonese 廣東話</span>
       </div>
     </section>
 
@@ -386,7 +483,7 @@
         </div>
         <div>
           <p class="cred-label">Languages</p>
-          <p class="cred-value">Mandarin<br>Cantonese<br>English</p>
+          <p class="cred-value">English<br>Mandarin 中文<br>Cantonese 廣東話</p>
         </div>
         <div>
           <p class="cred-label">Office</p>
@@ -395,7 +492,7 @@
       </div>
       <div class="card-divider" style="margin-top: 18px;"></div>
       <span class="card-label">Get in Touch</span>
-      <h2 class="card-title">Contact Robert</h2>
+      <h2 class="card-title">Contact</h2>
       <ul class="contact-list">
         <li>
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
@@ -426,11 +523,38 @@
       <span class="card-label">Client Words</span>
       <h2 class="card-title">Testimonials</h2>
       <div class="card-divider"></div>
-      <blockquote>
-        <span class="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <p class="testimonial-quote">&ldquo;My husband and I have been working with Robert since 2013. He has helped us buy and sell multiple properties over the years. We love working with Robert because he is very proactive and moves quickly. He is a seasoned professional in the real estate industry and also has access to a lot of resources. We would highly recommend Robert for anyone who is looking to buy or sell a home.&rdquo;</p>
-        <cite class="testimonial-cite">&#8212; Annie C</cite>
-      </blockquote>
+      <div class="testimonials-carousel" aria-label="Testimonials">
+        <div class="carousel-track">
+
+          <blockquote class="carousel-slide active">
+            <span class="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <p class="testimonial-quote">&ldquo;Mei Mei and Robert are the best real estate agents in LA I have known so far. They helped me to sell my colonial-style house last winter in Temple City. They know how to appreciate the architecture of the house and highlight it. The team is very professional and pay attention to all the details. From paint choices, changing out light fixtures, to staging and advertisement, they know how to get the home presented beautifully. You can trust and rely on them.&rdquo;</p>
+            <cite class="testimonial-cite">&#8212; Jacqueline C</cite>
+          </blockquote>
+
+          <blockquote class="carousel-slide">
+            <span class="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <p class="testimonial-quote">&ldquo;My wife and I recently purchased our newest home with the help of Robert and Mei Mei and had a wonderful experience from start to finish. We were moving from another region of California and Robert made coordinating with our hectic schedule a breeze. It ended up taking a few months to find the right house and having a trusted advisor as the process evolved was a life-saver. Robert and Mei Mei&rsquo;s guidance helped us stay patient and led to us landing our dream home without any major compromises.&rdquo;</p>
+            <cite class="testimonial-cite">&#8212; Nicolas B</cite>
+          </blockquote>
+
+          <blockquote class="carousel-slide">
+            <span class="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <p class="testimonial-quote">&ldquo;My husband and I have been working with Robert since 2013. He has helped us buy and sell multiple properties over the years. We love working with Robert because he is very proactive and moves quickly. He is a seasoned professional in the real estate industry and also has access to a lot of resources. We would highly recommend Robert for anyone who is looking to buy or sell a home.&rdquo;</p>
+            <cite class="testimonial-cite">&#8212; Annie C</cite>
+          </blockquote>
+
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn carousel-btn--prev" aria-label="Previous testimonial">&#8592;</button>
+          <div class="carousel-dots">
+            <button class="carousel-dot active" aria-label="Testimonial 1"></button>
+            <button class="carousel-dot" aria-label="Testimonial 2"></button>
+            <button class="carousel-dot" aria-label="Testimonial 3"></button>
+          </div>
+          <button class="carousel-btn carousel-btn--next" aria-label="Next testimonial">&#8594;</button>
+        </div>
+      </div>
     </article>
 
     <footer class="team-footer">
@@ -449,6 +573,31 @@
     </footer>
 
   </div>
+
+  <script>
+    (function () {
+      document.querySelectorAll('.testimonials-carousel').forEach(function (carousel) {
+        var slides = carousel.querySelectorAll('.carousel-slide');
+        var dots   = carousel.querySelectorAll('.carousel-dot');
+        var current = 0, timer;
+        function goTo(idx) {
+          slides[current].classList.remove('active');
+          dots[current].classList.remove('active');
+          current = (idx + slides.length) % slides.length;
+          slides[current].classList.add('active');
+          dots[current].classList.add('active');
+        }
+        function startTimer() { timer = setInterval(function () { goTo(current + 1); }, 5000); }
+        function stopTimer()  { clearInterval(timer); }
+        carousel.querySelector('.carousel-btn--prev').addEventListener('click', function () { stopTimer(); goTo(current - 1); startTimer(); });
+        carousel.querySelector('.carousel-btn--next').addEventListener('click', function () { stopTimer(); goTo(current + 1); startTimer(); });
+        dots.forEach(function (dot, i) { dot.addEventListener('click', function () { stopTimer(); goTo(i); startTimer(); }); });
+        carousel.addEventListener('mouseenter', stopTimer);
+        carousel.addEventListener('mouseleave', startTimer);
+        startTimer();
+      });
+    }());
+  </script>
 
 </body>
 </html>
