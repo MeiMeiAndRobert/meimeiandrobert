@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Mei Mei &amp; Robert | Luxury Real Estate</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Contact Mei Mei Liu and Robert Lee for luxury real estate in Pasadena, Los Angeles, and the San Gabriel Valley.">
+  <meta name="author" content="Mei Mei Liu & Robert Lee">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.meimeiandrobert.com/contact/">
+  <link rel="icon" href="../meimeiandrobert.jpg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.meimeiandrobert.com/contact/">
+  <meta property="og:title" content="Contact | Mei Mei &amp; Robert | Luxury Real Estate">
+  <meta property="og:description" content="Get in touch with Mei Mei Liu and Robert Lee for buying or selling luxury homes.">
+  <meta property="og:image" content="https://www.meimeiandrobert.com/meimeiandrobert.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8643ZZVEW1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8643ZZVEW1');
+  </script>
+
+  <style>
+    :root {
+      --font-serif:  'Playfair Display', Georgia, serif;
+      --font-sans:   'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --white-100: #ffffff;
+      --white-90:  rgba(255,255,255,0.90);
+      --white-70:  rgba(255,255,255,0.70);
+      --white-30:  rgba(255,255,255,0.28);
+      --glass-bg:     rgba(255,255,255,0.09);
+      --glass-border: rgba(255,255,255,0.16);
+      --card-radius:  22px;
+      --card-shadow:  0 20px 72px rgba(0,0,0,0.55);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      min-height: 100%;
+      font-family: var(--font-sans);
+      background: #080808;
+      color: var(--white-100);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .bg {
+      position: fixed;
+      inset: 0;
+      background: url('../meimeiandrobert.jpg') center 17% / cover no-repeat;
+      filter: blur(22px) brightness(0.42) saturate(1.25);
+      transform: scale(1.08);
+      z-index: 0;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 28px;
+      padding: 52px 20px 44px;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 900px;
+    }
+    .site-nav__logo {
+      text-decoration: none;
+      color: inherit;
+    }
+    .wordmark__name {
+      font-family: var(--font-serif);
+      font-size: clamp(1.2rem, 4vw, 1.6rem);
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--white-90);
+      transition: color 0.2s;
+    }
+    .site-nav__logo:hover .wordmark__name { color: var(--white-100); }
+    .wordmark__name-part {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .wordmark__sub {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--white-70);
+      margin-top: 6px;
+    }
+    .amp { color: #c0392b; }
+    .site-nav nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .site-nav__link {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white-70);
+      text-decoration: none;
+      transition: color 0.2s;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+      white-space: nowrap;
+    }
+    .site-nav__link:hover { color: var(--white-100); border-bottom-color: var(--white-30); }
+
+    .contact-wrap {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .contact-intro {
+      background: var(--glass-bg);
+      backdrop-filter: blur(28px) saturate(1.6);
+      -webkit-backdrop-filter: blur(28px) saturate(1.6);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--card-radius);
+      padding: 28px 26px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .section-label {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--white-70);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.45rem, 4vw, 2rem);
+      font-weight: 400;
+      color: var(--white-90);
+      letter-spacing: 0.02em;
+      margin-bottom: 12px;
+    }
+
+    .section-copy {
+      font-size: 0.96rem;
+      line-height: 1.8;
+      color: var(--white-90);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .contact-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(28px) saturate(1.6);
+      -webkit-backdrop-filter: blur(28px) saturate(1.6);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--card-radius);
+      padding: 28px 24px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .contact-card__photo {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 2px solid var(--white-30);
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .contact-card__name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.02rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .contact-card__role {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--white-70);
+      margin-bottom: 8px;
+    }
+
+    .contact-card__langs {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--white-70);
+      margin-bottom: 16px;
+    }
+
+    .contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--white-90);
+    }
+
+    .contact-list a {
+      color: var(--white-90);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-list a:hover { color: var(--white-100); }
+
+    .contact-card__cta {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white-90);
+      text-decoration: none;
+      border-bottom: 1px solid var(--white-30);
+      padding-bottom: 2px;
+    }
+    .contact-card__cta:hover { color: var(--white-100); border-bottom-color: var(--white-70); }
+
+    .office {
+      background: var(--glass-bg);
+      backdrop-filter: blur(28px) saturate(1.6);
+      -webkit-backdrop-filter: blur(28px) saturate(1.6);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--card-radius);
+      padding: 24px;
+      box-shadow: var(--card-shadow);
+      color: var(--white-90);
+      line-height: 1.75;
+      font-size: 0.95rem;
+    }
+
+    .connect {
+      background: var(--glass-bg);
+      backdrop-filter: blur(28px) saturate(1.6);
+      -webkit-backdrop-filter: blur(28px) saturate(1.6);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--card-radius);
+      padding: 24px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .connect-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .connect-links li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white-90);
+    }
+
+    .connect-links a {
+      color: var(--white-90);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .connect-links a:hover {
+      color: var(--white-100);
+    }
+
+    .icon {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+      opacity: 0.78;
+    }
+
+    @media (min-width: 760px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg" role="presentation" aria-hidden="true"></div>
+
+  <main class="page">
+
+    <header class="site-nav">
+      <a href="/" class="site-nav__logo" aria-label="Mei Mei &amp; Robert — Home">
+        <h1 class="wordmark__name"><span class="wordmark__name-part">Mei Mei</span> <span class="amp">&amp;</span> <span class="wordmark__name-part">Robert</span></h1>
+        <span class="wordmark__sub">Luxury Real Estate &nbsp;&bull;&nbsp; Pasadena &amp; Los Angeles</span>
+      </a>
+      <nav>
+        <a href="/" class="site-nav__link">Home</a>
+        <a href="/team/" class="site-nav__link">Team</a>
+        <a href="/contact/" class="site-nav__link">Contact</a>
+      </nav>
+    </header>
+
+    <section class="contact-wrap">
+      <article class="contact-intro">
+        <span class="section-label">Let Us Help</span>
+        <h2 class="section-title">Contact</h2>
+        <p class="section-copy">Buying, selling, or planning your next move in Pasadena or Los Angeles? Reach out directly to Mei Mei or Robert and we will respond promptly.</p>
+      </article>
+
+      <div class="contact-grid">
+        <article class="contact-card">
+          <img class="contact-card__photo" src="../meimeiprofile.jpeg" alt="Mei Mei Liu" width="84" height="84" loading="lazy">
+          <h3 class="contact-card__name">Mei Mei Liu</h3>
+          <p class="contact-card__role">Realtor</p>
+          <p class="contact-card__langs">Mandarin 中文 • English</p>
+          <ul class="contact-list">
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+              <a href="tel:6264295715">626-429-5715</a>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <a href="mailto:meimei@meimeiandrobert.com">meimei@meimeiandrobert.com</a>
+            </li>
+          </ul>
+          <a class="contact-card__cta" href="/meimei/">View Mei Mei Profile</a>
+        </article>
+
+        <article class="contact-card">
+          <img class="contact-card__photo" src="../robertprofile.jpg" alt="Robert Lee" width="84" height="84" loading="lazy">
+          <h3 class="contact-card__name">Robert Lee</h3>
+          <p class="contact-card__role">Broker Associate</p>
+          <p class="contact-card__langs">English • Mandarin 中文 • Cantonese 廣東話</p>
+          <ul class="contact-list">
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+              <a href="tel:6268243388">626-824-3388</a>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <a href="mailto:robert@meimeiandrobert.com">robert@meimeiandrobert.com</a>
+            </li>
+          </ul>
+          <a class="contact-card__cta" href="/robert/">View Robert Profile</a>
+        </article>
+      </div>
+
+      <article class="office">
+        <span class="section-label">Office</span>
+        540 S. Lake Ave<br>
+        Pasadena, CA 91101
+      </article>
+
+      <article class="connect">
+        <span class="section-label">Connect With Us</span>
+        <ul class="connect-links">
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608C4.516 2.497 5.783 2.226 7.15 2.163 8.416 2.105 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.333.014 7.053.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.053.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.856.601 3.698 1.942 5.038 1.341 1.341 3.182 1.857 5.038 1.942C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.856-.085 3.698-.601 5.038-1.942 1.341-1.341 1.857-3.182 1.942-5.038C23.986 15.668 24 15.259 24 12s-.014-3.668-.072-4.948c-.085-1.856-.601-3.698-1.942-5.038C20.645.673 18.804.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+            <a href="https://www.instagram.com/meimeiandrobert/" target="_blank" rel="noopener noreferrer">Instagram: MeiMeiandRobert</a>
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+            <a href="https://www.facebook.com/MeiMeiandRobert/" target="_blank" rel="noopener noreferrer">Facebook: MeiMeiandRobert</a>
+          </li>
+        </ul>
+      </article>
+    </section>
+
+  </main>
+
+</body>
+</html>
