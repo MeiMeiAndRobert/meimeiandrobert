@@ -134,6 +134,7 @@
       white-space: nowrap;
     }
     .site-nav__link:hover { color: var(--white-100); border-bottom-color: var(--white-30); }
+    .site-nav__link[aria-current="page"] { color: var(--white-100); border-bottom-color: var(--white-30); }
 
     .contact-wrap {
       width: 100%;
@@ -349,7 +350,7 @@
       <nav>
         <a href="/" class="site-nav__link">Home</a>
         <a href="/team/" class="site-nav__link">Team</a>
-        <a href="/contact/" class="site-nav__link">Contact</a>
+        <a href="/contact/" class="site-nav__link" aria-current="page">Contact</a>
       </nav>
     </header>
 
