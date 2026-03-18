@@ -273,6 +273,16 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--white-70);
+      margin-bottom: 6px;
+    }
+
+    .contact-card__dre {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--white-70);
       margin-bottom: 16px;
     }
 
@@ -480,7 +490,7 @@
         <p class="section-copy">Buying, selling, or planning your next move in Pasadena or Los Angeles? Reach out directly to Mei Mei or Robert and we will respond promptly.</p>
         <div class="contact-intro__meta">
           <p class="contact-intro__office">
-            <strong>Office:</strong> 540 S. Lake Ave, Pasadena, CA 91101
+            <strong>Office:</strong> Berkshire Hathaway HomeServices CA Properties, 540 S. Lake Ave, Pasadena, CA 91101
           </p>
           <ul class="contact-intro__socials" aria-label="Social media links">
             <li>
@@ -501,6 +511,7 @@
           <h3 class="contact-card__name">Mei Mei Liu</h3>
           <p class="contact-card__role">Realtor</p>
           <p class="contact-card__langs">Mandarin 中文 • English</p>
+          <p class="contact-card__dre">CA DRE #01329663</p>
           <ul class="contact-list">
             <li>
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
@@ -519,6 +530,7 @@
           <h3 class="contact-card__name">Robert Lee</h3>
           <p class="contact-card__role">Broker Associate</p>
           <p class="contact-card__langs">English • Mandarin 中文 • Cantonese 廣東話</p>
+          <p class="contact-card__dre">CA DRE #01714793</p>
           <ul class="contact-list">
             <li>
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
@@ -558,7 +570,7 @@
             <textarea id="contact-message" name="message" placeholder="Tell us how we can help" required></textarea>
           </div>
           <button id="contact-form-submit" type="submit">Send Message</button>
-          <p id="contact-form-note" class="inquiry-form__note">Submitting this form sends your message directly to our inbox via Formspree.</p>
+          <p id="contact-form-note" class="inquiry-form__note"></p>
         </form>
         <div id="contact-form-success" class="inquiry-form__success" role="status" aria-live="polite">
           <h4>Thank You</h4>
